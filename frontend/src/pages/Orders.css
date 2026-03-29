@@ -1,0 +1,160 @@
+.orders-page {
+  background: #f1f3f6;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.orders-loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: #878787;
+}
+
+.orders-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.orders-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #212121;
+  margin: 0 0 16px;
+}
+
+.orders-empty {
+  background: #fff;
+  border-radius: 4px;
+  padding: 60px;
+  text-align: center;
+}
+
+.orders-empty h2 {
+  font-size: 20px;
+  color: #212121;
+  margin: 16px 0 8px;
+}
+
+.orders-empty p {
+  color: #878787;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 12px 40px;
+  background: #2874f0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-card {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.order-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.order-id {
+  font-size: 14px;
+  font-weight: 600;
+  color: #212121;
+  display: block;
+}
+
+.order-date {
+  font-size: 12px;
+  color: #878787;
+  display: block;
+  margin-top: 2px;
+}
+
+.order-status {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.order-items-preview {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.order-item-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.order-item-row img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border: 1px solid #f0f0f0;
+  border-radius: 2px;
+}
+
+.order-item-name {
+  font-size: 14px;
+  color: #212121;
+  margin: 0 0 4px;
+}
+
+.order-item-meta {
+  font-size: 13px;
+  color: #878787;
+  margin: 0;
+}
+
+.more-items {
+  font-size: 13px;
+  color: #2874f0;
+  margin: 0;
+}
+
+.order-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-top: 1px solid #f0f0f0;
+  background: #fafafa;
+}
+
+.order-total {
+  font-size: 16px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.view-order-btn {
+  padding: 8px 20px;
+  background: #2874f0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.view-order-btn:hover { opacity: 0.9; }

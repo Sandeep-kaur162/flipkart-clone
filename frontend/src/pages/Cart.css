@@ -1,0 +1,246 @@
+.cart-page {
+  background: #f1f3f6;
+  min-height: 100vh;
+  padding: 16px;
+}
+
+.cart-empty {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+  max-width: 400px;
+  margin: 40px auto;
+  border-radius: 4px;
+}
+
+.cart-empty h2 {
+  font-size: 20px;
+  color: #212121;
+  margin: 16px 0 8px;
+}
+
+.cart-empty p {
+  color: #878787;
+  margin-bottom: 20px;
+}
+
+.shop-btn {
+  display: inline-block;
+  padding: 12px 40px;
+  background: #2874f0;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.cart-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.cart-items {
+  flex: 1;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.cart-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: #212121;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cart-item-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.cart-item-details {
+  flex: 1;
+}
+
+.cart-item-name {
+  font-size: 15px;
+  color: #212121;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.cart-item-name:hover { color: #2874f0; }
+
+.cart-item-brand {
+  font-size: 13px;
+  color: #878787;
+  margin: 0 0 8px;
+}
+
+.cart-item-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.cart-item-original {
+  font-size: 14px;
+  color: #878787;
+  text-decoration: line-through;
+}
+
+.cart-item-discount {
+  font-size: 14px;
+  color: #388e3c;
+  font-weight: 500;
+}
+
+.cart-item-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.qty-control button {
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #212121;
+  transition: background 0.15s;
+}
+
+.qty-control button:hover:not(:disabled) { background: #f0f0f0; }
+.qty-control button:disabled { color: #ccc; cursor: not-allowed; }
+
+.qty-control span {
+  width: 40px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  line-height: 32px;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #878787;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+
+.remove-btn:hover { color: #ff6161; }
+
+.cart-summary {
+  width: 320px;
+  flex-shrink: 0;
+  background: #fff;
+  border-radius: 4px;
+  padding: 16px;
+  position: sticky;
+  top: 68px;
+}
+
+.cart-summary h3 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #878787;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: #212121;
+  margin-bottom: 12px;
+}
+
+.summary-row.discount { color: #388e3c; }
+
+.free { color: #388e3c; font-weight: 500; }
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 700;
+  color: #212121;
+  padding: 12px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 12px;
+}
+
+.savings-msg {
+  font-size: 13px;
+  color: #388e3c;
+  margin-bottom: 16px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  background: #fb641b;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.checkout-btn:hover { opacity: 0.9; }
+
+@media (max-width: 768px) {
+  .cart-container { flex-direction: column; }
+  .cart-summary { width: 100%; position: static; }
+}

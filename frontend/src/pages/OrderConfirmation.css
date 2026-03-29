@@ -1,0 +1,168 @@
+.oc-page {
+  background: #f1f3f6;
+  min-height: 100vh;
+  padding: 24px 16px;
+}
+
+.oc-loading {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: #878787;
+}
+
+.oc-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.oc-header {
+  background: #f0faf0;
+  padding: 40px 24px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.oc-header h1 {
+  font-size: 24px;
+  color: #212121;
+  margin: 16px 0 8px;
+}
+
+.oc-header p {
+  font-size: 15px;
+  color: #878787;
+  margin: 0 0 16px;
+}
+
+.oc-order-id {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #212121;
+}
+
+.oc-items {
+  padding: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.oc-items h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #212121;
+  margin: 0 0 16px;
+}
+
+.oc-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f9f9f9;
+}
+
+.oc-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.oc-item-info {
+  flex: 1;
+}
+
+.oc-item-name {
+  font-size: 14px;
+  color: #212121;
+  margin: 0 0 4px;
+}
+
+.oc-item-meta {
+  font-size: 13px;
+  color: #878787;
+  margin: 0;
+}
+
+.oc-item-total {
+  font-size: 15px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.oc-details {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.oc-address,
+.oc-payment {
+  flex: 1;
+}
+
+.oc-address h3,
+.oc-payment h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #878787;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 8px;
+}
+
+.oc-address p,
+.oc-payment p {
+  font-size: 14px;
+  color: #212121;
+  margin: 4px 0;
+}
+
+.oc-total {
+  font-size: 20px;
+  font-weight: 700;
+  color: #212121;
+}
+
+.oc-actions {
+  display: flex;
+  gap: 12px;
+  padding: 24px;
+  justify-content: center;
+}
+
+.oc-btn {
+  padding: 12px 32px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.oc-btn.primary {
+  background: #2874f0;
+  color: #fff;
+}
+
+.oc-btn.secondary {
+  background: #fff;
+  color: #2874f0;
+  border: 1px solid #2874f0;
+}
+
+.oc-btn:hover { opacity: 0.85; }
+
+@media (max-width: 600px) {
+  .oc-details { flex-direction: column; }
+  .oc-actions { flex-direction: column; align-items: stretch; text-align: center; }
+}
