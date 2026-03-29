@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Build output
+frontend/dist/
+
+# Environment files (contain secrets)
+backend/.env
+frontend/.env
+
+# SQLite database (contains user data)
+backend/flipkart.db
+backend/flipkart.db-shm
+backend/flipkart.db-wal
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

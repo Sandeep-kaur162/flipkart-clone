@@ -1,0 +1,73 @@
+.admin-page { background: var(--bg); min-height: 100vh; padding: 24px 20px; }
+.admin-container { max-width: 1200px; margin: 0 auto; }
+
+.admin-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+.admin-header h1 { font-size: 24px; font-weight: 800; color: var(--text); margin: 0 0 4px; }
+.admin-header p { font-size: 14px; color: var(--text-muted); margin: 0; }
+.admin-refresh-btn { display: flex; align-items: center; gap: 8px; padding: 10px 18px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; font-size: 14px; font-weight: 600; cursor: pointer; color: var(--text); }
+.admin-refresh-btn:hover { background: var(--primary-light); color: var(--primary); }
+.spin { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Stats */
+.admin-stats { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+.admin-stat-card { flex: 1; min-width: 100px; background: var(--card); border: 2px solid var(--border); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; align-items: center; gap: 4px; cursor: pointer; transition: all 0.2s; }
+.admin-stat-card:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.admin-stat-card.active { background: var(--primary-light); }
+.admin-stat-icon { font-size: 18px; }
+.admin-stat-count { font-size: 24px; font-weight: 800; }
+.admin-stat-label { font-size: 11px; color: var(--text-muted); text-transform: capitalize; }
+
+/* Toolbar */
+.admin-toolbar { display: flex; gap: 12px; margin-bottom: 20px; }
+.admin-search { flex: 1; display: flex; align-items: center; gap: 10px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 0 14px; }
+.admin-search input { flex: 1; border: none; outline: none; padding: 11px 0; font-size: 14px; background: none; color: var(--text); }
+.admin-filter-select { padding: 11px 14px; border: 1px solid var(--border); border-radius: 10px; font-size: 14px; background: var(--card); color: var(--text); outline: none; cursor: pointer; }
+
+.admin-loading, .admin-empty { text-align: center; padding: 60px; color: var(--text-muted); font-size: 16px; }
+
+/* Order Cards */
+.admin-orders-list { display: flex; flex-direction: column; gap: 14px; }
+.admin-order-card { background: var(--card); border-radius: 14px; border: 1px solid var(--border); padding: 18px 20px; position: relative; overflow: hidden; transition: box-shadow 0.2s; }
+.admin-order-card:hover { box-shadow: var(--shadow-md); }
+.admin-order-card.cancelled { border-color: #ffcdd2; background: #fff8f8; }
+
+.admin-cancelled-ribbon { position: absolute; top: 12px; right: -28px; background: #e53935; color: #fff; font-size: 10px; font-weight: 800; padding: 4px 36px; transform: rotate(45deg); letter-spacing: 1px; }
+
+.admin-order-top { display: flex; align-items: center; gap: 16px; margin-bottom: 14px; flex-wrap: wrap; }
+.admin-order-meta { display: flex; flex-direction: column; gap: 2px; }
+.admin-order-id { font-size: 14px; font-weight: 700; color: var(--text); }
+.admin-order-date { font-size: 12px; color: var(--text-muted); }
+.admin-order-customer { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text); flex: 1; }
+.admin-customer-email { color: var(--text-muted); font-size: 12px; }
+.admin-order-right { display: flex; align-items: center; gap: 12px; margin-left: auto; }
+.admin-order-amount { font-size: 16px; font-weight: 800; color: var(--text); }
+.admin-status-badge { display: flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: 700; text-transform: capitalize; }
+
+/* Items */
+.admin-order-items { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+.admin-item-chip { display: flex; align-items: center; gap: 8px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 12px; color: var(--text); }
+.admin-item-chip img { width: 32px; height: 32px; object-fit: contain; border-radius: 4px; }
+.admin-item-qty { color: var(--text-muted); font-weight: 600; }
+.admin-more-items { font-size: 12px; color: var(--primary); font-weight: 600; align-self: center; }
+
+.admin-order-addr { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+
+/* Status Update */
+.admin-status-update { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 1px solid var(--border); flex-wrap: wrap; }
+.admin-update-label { font-size: 12px; font-weight: 700; color: var(--text-muted); white-space: nowrap; }
+.admin-status-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+.admin-status-btn { display: flex; align-items: center; gap: 5px; padding: 6px 12px; border: 1.5px solid var(--border); border-radius: 8px; background: var(--bg); font-size: 12px; font-weight: 600; cursor: pointer; color: var(--text); transition: all 0.15s; text-transform: capitalize; }
+.admin-status-btn:hover:not(:disabled) { border-color: var(--primary); color: var(--primary); background: var(--primary-light); }
+.admin-status-btn.danger:hover:not(:disabled) { border-color: #e53935; color: #e53935; background: #fee2e2; }
+.admin-status-btn:disabled { cursor: not-allowed; opacity: 0.7; }
+.admin-status-btn.current { cursor: default; }
+
+@media (max-width: 768px) {
+  .admin-stats { gap: 8px; }
+  .admin-stat-card { min-width: 80px; padding: 10px; }
+  .admin-stat-count { font-size: 20px; }
+  .admin-toolbar { flex-direction: column; }
+  .admin-order-top { gap: 10px; }
+  .admin-order-right { width: 100%; justify-content: space-between; }
+}

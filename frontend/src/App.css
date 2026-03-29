@@ -1,0 +1,37 @@
+/* ── ShopZen Design System ─────────────────────────────────────────────── */
+:root {
+  --primary:       #6c3fc5;   /* purple */
+  --primary-dark:  #5530a8;
+  --primary-light: #ede8fb;
+  --accent:        #00c9a7;   /* teal */
+  --accent-dark:   #00a88c;
+  --danger:        #e53935;
+  --warning:       #f59e0b;
+  --success:       #16a34a;
+  --bg:            #f4f5f9;
+  --card:          #ffffff;
+  --border:        #e8e8f0;
+  --text:          #1a1a2e;
+  --text-muted:    #6b7280;
+  --text-light:    #9ca3af;
+  --radius:        10px;
+  --radius-sm:     6px;
+  --shadow:        0 2px 12px rgba(108,63,197,0.08);
+  --shadow-md:     0 4px 24px rgba(108,63,197,0.14);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+button, input, select, textarea { font-family: inherit; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f0f0f0; }
+::-webkit-scrollbar-thumb { background: #c4b5fd; border-radius: 3px; }
