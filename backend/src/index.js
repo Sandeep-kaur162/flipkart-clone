@@ -6,7 +6,16 @@ const authMiddleware = require('./middleware/auth');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:3001',
+    'https://flipkart-frontend-a10g.onrender.com',
+    /\.onrender\.com$/,
+    /\.vercel\.app$/,
+  ],
+  credentials: true,
+}));
 app.use(express.json());
 app.use(authMiddleware); // attach req.user to every request
 
