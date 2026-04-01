@@ -11,12 +11,11 @@ if (isProduction) {
     connectionString: process.env.DATABASE_URL,
     ssl: { rejectUnauthorized: false },
   });
+  module.exports = { query: (text, params) => pool.query(text, params), pool };
 } else {
-  // SQLite for local development
+  // SQLite for local development — loaded dynamically to avoid Render issues
   const Database = require('better-sqlite3');
   const path = require('path');
-
-  // Initialize DB (creates tables + seeds if needed)
   require('./init');
 
   const DB_PATH = path.join(__dirname, '../../flipkart.db');
@@ -77,6 +76,6 @@ if (isProduction) {
       return Promise.resolve(client);
     },
   };
-}
 
-module.exports = { query: (text, params) => pool.query(text, params), pool };
+  module.exports = { query: (text, params) => pool.query(text, params), pool };
+}
